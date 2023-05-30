@@ -88,11 +88,11 @@ async function setupViewer(){
 
     viewer.scene.activeCamera.setCameraOptions({controlsEnabled: false})
 
-
-    await manager.addFromPath("./assets/ring.glb")
+    const assets = await manager.addFromPath("./assets/ring.glb")
 
     const pearl = manager.materials!.findMaterialsByName('/Peach-b57391c8-0a2c-478c-91c5-ff6a93c5d5b0')[0] as MeshBasicMaterial2;
     const ring = manager.materials!.findMaterialsByName('/Yellow Gold-8508952d-1574-41b6-8512-d7f9eb00d480')[0] as MeshBasicMaterial2;
+    
     
     // Load an environment map if not set in the glb file
     // await viewer.scene.setEnvironment(
